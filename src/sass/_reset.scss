@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Spartan', sans-serif;
+    min-height: 100vh;
+    background-color: $light-grayish-cyan-background;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+// Utilities
+.flex {
+    display: flex;
+
+    &__ai-center {
+        align-items: center;
+    }
+    &__jc-center {
+        justify-content: center;
+    }
+    &__jc-between {
+        justify-content: space-between;
+    }
+}
+
+.green-border-left {
+    border-left: 2px solid $desaturated-dark-cyan;
+}

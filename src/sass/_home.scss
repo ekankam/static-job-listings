@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+.home {
+    &__header {
+        background-color: $desaturated-dark-cyan;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+}
