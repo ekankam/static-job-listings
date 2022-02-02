@@ -9,4 +9,54 @@
             width: 100%;
         }
     }
+
+    &__filter-bar {
+        max-width: 1300px;
+        width: 95%;
+
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        padding: 1.7rem 3rem;
+        color: $desaturated-dark-cyan;
+        border-radius: $border-radius;
+        background-color: $light-grayish-cyan-background;
+        box-shadow: $shadow;
+
+        .filter-tablets-box {
+            flex: 1;
+            gap: 1rem;
+        }
+
+        .filter-tablet {
+            gap: 1rem;
+
+            &__name {
+                text-transform: capitalize;
+            }
+
+            .remove-icon {
+                background-color: $desaturated-dark-cyan;
+                padding: 1rem;
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+                cursor: pointer;
+                transition: background-color 200ms ease-in-out;
+
+                &:hover {
+                    background-color: $very-dark-grayish-cyan;
+                }
+            }
+        }
+
+        .clear {
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+                transition: background-color 200ms ease-in-out;
+            }
+        }
+    }
 }
