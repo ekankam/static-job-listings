@@ -42,8 +42,6 @@ const Home = () => {
         setFilters(removeFilter)
     }
 
-    console.log('listings', listings)
-
     const showFilterBar =
         filters.length > 0
             ? 'home__filter-bar flex flex__ai-center flex__jc-between show-filter-bar'
@@ -57,8 +55,9 @@ const Home = () => {
 
             <div className={showFilterBar}>
                 <div className="filter-tablets-box flex flex__ai-center">
-                    {filters.map((filter) => (
+                    {filters.map((filter, index) => (
                         <FilterTablets
+                            key={index}
                             filter={filter}
                             removeFilterHandler={removeFilterHandler}
                         />
